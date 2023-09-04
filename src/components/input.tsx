@@ -60,14 +60,30 @@ export default function Input() {
         </div>
         {formData.planes && (
           <div className="form-group mb-3">
-            <input
-              type="number"
-              className="form-control"
-              name="planes"
-              placeholder="Miles traveled by planes"
-              value={formData.miles.planes}
-              onChange={handleMilesChange}
-            />
+            <div className="transport-input-container flex">
+              <span className="col-span-9 pr-5">
+                <input
+                  type='range'
+                  onChange={handleMilesChange}
+                  name = "planes"
+                  min={1}
+                  max={500}
+                  step={1}
+                  value={formData.miles.planes}
+                  className='custom-slider'
+                />
+              </span>
+              <span className="col-span-1">
+                <input
+                  type="number"
+                  className="form-control"
+                  name="planes"
+                  placeholder="Miles"
+                  value={formData.miles.planes}
+                  onChange={handleMilesChange}
+                />
+              </span>
+            </div>
           </div>
         )}
 
