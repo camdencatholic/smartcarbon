@@ -1,2 +1,2 @@
-export const name = "NAME"
-export const description = "DESCRIPTION"
+export const name = "SmartCarbon"
+export const description = "An app that calculates the carbon footprint of travel plans and offers options to offset emissions by supporting environmental projects or making sustainable choices during the trip. "
