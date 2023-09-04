@@ -1,8 +1,5 @@
-import Link from "next/link";
+import Input from "@/components/input"
 
-export default () => (
-	<>
-		this is da app
-		<Link href={"/"} className="btn btn-primary">go to da homescreen</Link>
-	</>
-)
+export default () => {
+	return <Input />
+}
