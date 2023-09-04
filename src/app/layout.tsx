@@ -1,5 +1,4 @@
 import {name,  description } from '@/typescript/constants'
-import './globals.css'
 import '../styles/globals.scss'
 import { Raleway } from 'next/font/google'
 import Script from 'next/script'
