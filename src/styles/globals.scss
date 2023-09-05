@@ -3,15 +3,15 @@
 @tailwind utilities;
 $prefix: "sc-";
 $primary: #02C39A;
+$secondary: #87BFFF;
+$tertiary: #3F8EFC;
+$quaternary: #2667FF;
+$quinary: #3B28CC;
+
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 *::selection {
 	background-color: $primary;
-	color: white;
-	opacity: 20%;
-}
-#footer::selection {
-	background-color: lighten($primary, 30%);
 	color: white;
 	opacity: 20%;
 }

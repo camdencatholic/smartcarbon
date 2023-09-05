@@ -1,9 +1,11 @@
 import {name,  description } from '@/typescript/constants'
 import '../styles/globals.scss'
-import { Raleway } from 'next/font/google'
+import { FontSerif } from '../typescript/fonts'
 import Script from 'next/script'
+import '../../node_modules/bootstrap-icons/font/bootstrap-icons.scss'
+import Navbar from '@/components/nav'
 
-const rw = Raleway({ subsets: ['latin'], weight: "variable" })
+
 
 export const metadata = {
   title: name,
@@ -20,7 +22,7 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon" href="/vertical.jpg" type="image/x-icon" />
+        <link rel="shortcut icon" href="/globe-americas.svg" type="image/x-icon" />
       <Script id="toggleTheme">
 						{
 							`if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -31,7 +33,8 @@ export default function RootLayout({
 						}
 					</Script>
       </head>
-      <body className={rw.className}>
+      <body className={FontSerif.className}>
+        <Navbar />
         {children}
       </body>
     </html>
