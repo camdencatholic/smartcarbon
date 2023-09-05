@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Icon from './icon';
 import type { FormData } from '../typescript/dataTypes'
+import Link from 'next/link';
 
 export default function Input() {
   const [formData, setFormData] = useState<FormData>({
@@ -34,11 +35,28 @@ export default function Input() {
     });
   };
 
+  // Basic Calculations
+
   const milesTraveled = (formData.miles.planes || 0) + (formData.miles.cars || 0) + (formData.miles.boats || 0);
   const gOfCarbonReleasedByPlane = (formData.miles.planes || 0) * 41;
   const gOfCarbonReleasedByCar = (formData.miles.cars || 0) * 404;
   const gOfCarbonReleasedByBoat = (formData.miles.boats || 0) * 635;
   const totalCarbonEmissions = gOfCarbonReleasedByPlane + gOfCarbonReleasedByCar + gOfCarbonReleasedByBoat;
+
+  // Progress bar logic
+
+  const successThreshold = 100000;
+  const warningThreshold = 250000;
+  const dangerThreshold = 500000;
+
+  let successPercentage = (totalCarbonEmissions / successThreshold) * 100;
+  let warningPercentage = ((totalCarbonEmissions - successThreshold) / (warningThreshold - successThreshold)) * 100;
+  let dangerPercentage = ((totalCarbonEmissions - warningThreshold) / (dangerThreshold - warningThreshold)) * 100;
+
+  // Ensure the percentages stay within 0% to 100%
+  successPercentage = Math.min(100, Math.max(0, successPercentage));
+  warningPercentage = Math.min(100, Math.max(0, warningPercentage));
+  dangerPercentage = Math.min(100, Math.max(0, dangerPercentage));
   
   
   return (
@@ -181,19 +199,42 @@ export default function Input() {
         </div>
       </div>
       {/* From this point onward is the progress bar thingy */}
-      <div className='px-10'>
+      <div className="flex content-center justify-center pb-2">
+        <h4>
+          Total Estimated*  Carbon Emissions: &nbsp; 
+            <span>
+              {(totalCarbonEmissions / 1000).toLocaleString("en-US")}
+            </span>
+          kg of carbon
+        </h4>
+      </div>
+      <div className="flex content-center justify-center pb-6">
+        <h4>
+          Current rating: &nbsp;
+          <span className={`text-bg-${totalCarbonEmissions >= dangerThreshold ? "danger" : totalCarbonEmissions >= warningThreshold ? "warning" : "success"} p-2 rounded`}>
+            {totalCarbonEmissions >= dangerThreshold ? "Danger!" : totalCarbonEmissions >= warningThreshold ? "Warning." : "Good!"}
+          </span>
+        </h4>
+      </div>
+      <div className='px-10 pb-6'>
         <div className="progress-stacked">
-          <div className="progress" role="progressbar" aria-label="Segment one" aria-valuenow={33} aria-valuemin={0} aria-valuemax={100} style={{width: 33 + "%"}}>
-            <div className="progress-bar bg-success">good amount of carbon</div>
+          <div className="progress" role="progressbar" aria-label="Segment one" aria-valuenow={successPercentage} aria-valuemin={0} aria-valuemax={100} style={{ width: successPercentage + "%" }}>
+            <div className="progress-bar bg-success">Good</div>
           </div>
-          <div className="progress" role="progressbar" aria-label="Segment two" aria-valuenow={33} aria-valuemin={0} aria-valuemax={100} style={{width: 33 + "%"}}>
-            <div className="progress-bar bg-warning">mid amount of carbon</div>
+          <div className="progress" role="progressbar" aria-label="Segment two" aria-valuenow={warningPercentage} aria-valuemin={0} aria-valuemax={100} style={{ width: warningPercentage + "%" }}>
+            <div className="progress-bar bg-warning">Warning</div>
           </div>
-          <div className="progress" role="progressbar" aria-label="Segment three" aria-valuenow={34} aria-valuemin={0} aria-valuemax={100} style={{width: 34 + "%"}}>
-            <div className="progress-bar bg-danger">you are climate change</div>
+          <div className="progress" role="progressbar" aria-label="Segment three" aria-valuenow={dangerPercentage} aria-valuemin={0} aria-valuemax={100} style={{ width: dangerPercentage + "%" }}>
+            <div className="progress-bar bg-danger">Danger</div>
           </div>
         </div>
-      </div>  
+      </div>
+      <div className="flex content-center justify-center">
+        <Icon name='arrow-up'  />
+      </div>
+      <div className="flex content-center justify-center">
+        {totalCarbonEmissions >= dangerThreshold || totalCarbonEmissions >= warningThreshold ? <p>Consider reducing your travel <Link href={"/reduce/how-to-reduce/"} className={`link link-${totalCarbonEmissions >= dangerThreshold ? "danger" : totalCarbonEmissions >= warningThreshold ? "warning" : "success"}`}>Read More &rarr;</Link></p> : ""}
+      </div>
       </>
   );
 }
