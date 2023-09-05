@@ -209,23 +209,25 @@ export default function Input() {
         </h4>
       </div>
       <div className="flex content-center justify-center pb-6">
-        <h4>
-          Current rating: &nbsp;
-          <span className={`text-bg-${totalCarbonEmissions >= dangerThreshold ? "danger" : totalCarbonEmissions >= warningThreshold ? "warning" : "success"} p-2 rounded`}>
-            {totalCarbonEmissions >= dangerThreshold ? "Danger!" : totalCarbonEmissions >= warningThreshold ? "Warning." : "Good!"}
-          </span>
-        </h4>
+        <div>
+          <h4>
+            Current rating: &nbsp;
+            <span className={`text-bg-${totalCarbonEmissions >= dangerThreshold ? "danger" : totalCarbonEmissions >= warningThreshold ? "warning" : "success"} p-2 rounded transition-all`}>
+              {totalCarbonEmissions >= dangerThreshold ? "Danger!" : totalCarbonEmissions >= warningThreshold ? "Warning." : "Good!"}
+            </span>
+          </h4>
+        </div>
       </div>
       <div className='px-10 pb-6'>
         <div className="progress-stacked">
           <div className="progress" role="progressbar" aria-label="Segment one" aria-valuenow={successPercentage} aria-valuemin={0} aria-valuemax={100} style={{ width: successPercentage + "%" }}>
-            <div className="progress-bar bg-success">Good</div>
+            <div className="progress-bar progress-bar-striped  bg-success">Good</div>
           </div>
           <div className="progress" role="progressbar" aria-label="Segment two" aria-valuenow={warningPercentage} aria-valuemin={0} aria-valuemax={100} style={{ width: warningPercentage + "%" }}>
-            <div className="progress-bar bg-warning">Warning</div>
+            <div className="progress-bar progress-bar-striped  bg-warning">Warning</div>
           </div>
           <div className="progress" role="progressbar" aria-label="Segment three" aria-valuenow={dangerPercentage} aria-valuemin={0} aria-valuemax={100} style={{ width: dangerPercentage + "%" }}>
-            <div className="progress-bar bg-danger">Danger</div>
+            <div className="progress-bar progress-bar-striped  bg-danger">Danger</div>
           </div>
         </div>
       </div>
@@ -233,7 +235,7 @@ export default function Input() {
         <Icon name='arrow-up'  />
       </div>
       <div className="flex content-center justify-center">
-        {totalCarbonEmissions >= dangerThreshold || totalCarbonEmissions >= warningThreshold ? <p>Consider reducing your travel <Link href={"/reduce/how-to-reduce/"} className={`link link-${totalCarbonEmissions >= dangerThreshold ? "danger" : totalCarbonEmissions >= warningThreshold ? "warning" : "success"}`}>Read More &rarr;</Link></p> : ""}
+        {totalCarbonEmissions >= dangerThreshold || totalCarbonEmissions >= warningThreshold ? <p>Consider reducing your travel <Link href={"/reduce/how-to-reduce/"} className={`link link-${totalCarbonEmissions >= dangerThreshold ? "danger" : totalCarbonEmissions >= warningThreshold ? "warning" : "success"} transition-all`}>Read More &rarr;</Link></p> : ""}
       </div>
       </>
   );
