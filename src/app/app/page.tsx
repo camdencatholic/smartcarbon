@@ -1,15 +1,11 @@
 import Input from "@/components/input"
 import Link from "next/link"
-export default ({
-	searchParams,
-  }: {
-	searchParams: { [key: string]: string | string[] | undefined }
-  }) => {
+export default () => {
 	return (
 		<>
 			<div className="flex content-center justify-center">
 				<h1 className="text-4xl pt-4">
-					{searchParams.name ? "Hello, " + searchParams.name + "!" : "Hello!"}
+					Welcome!
 				</h1>
 			</div>
 			<div className="px-8">
