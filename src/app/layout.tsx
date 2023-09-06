@@ -8,6 +8,7 @@ import { Metadata } from 'next'
 import Footer from '@/components/footer'
 import { version as reactVersion } from 'react'
 import pkg from '../../package.json'
+const url = new URL("https://camdencatholic.github.io/smartcarbon/")
 
 
 
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
   title: name,
   description: description,
   generator: `Next.js v${pkg.dependencies.next} & React v${reactVersion}`,
+  metadataBase: url,
   openGraph: {
     type: "website",
     title: name,
