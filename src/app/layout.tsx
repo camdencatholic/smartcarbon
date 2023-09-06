@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: name,
     description: description,
     images: {
-      url: "/favi-text.png"
+      url: "https://camdencatholic.github.io/smartcarbon/favi-text.png"
     }
   }
 }
@@ -35,7 +35,7 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon" href="/favi.svg" type="image/x-icon" />
+        <link rel="shortcut icon" href="https://camdencatholic.github.io/smartcarbon/favi.svg" type="image/x-icon" />
       <Script id="toggleTheme">
 						{
 							`if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
