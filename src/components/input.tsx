@@ -91,7 +91,7 @@ export default function Input() {
                         type='range'
                         onChange={handleMilesChange}
                         name="planes"
-                        min={1}
+                        min={0}
                         max={500}
                         step={1}
                         value={formData.miles.planes || 0}
@@ -133,7 +133,7 @@ export default function Input() {
                         type='range'
                         onChange={handleMilesChange}
                         name="cars"
-                        min={1}
+                        min={0}
                         max={500}
                         step={1}
                         value={formData.miles.cars || 0}
@@ -175,7 +175,7 @@ export default function Input() {
                         type='range'
                         onChange={handleMilesChange}
                         name="boats"
-                        min={1}
+                        min={0}
                         max={500}
                         step={1}
                         value={formData.miles.boats || 0}
