@@ -1,34 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SmartCarbon
+
+![SmartCarbon logo](public/favi-text.svg)
+SmartCarbon is an app designed to help individuals make environmentally responsible travel choices. Whether you're planning a vacation or a daily commute, SmartCarbon empowers you to calculate the carbon footprint of your travel plans and provides options to offset emissions by supporting environmental projects or making sustainable choices during your trip.
+
+This project was created as a joint effort between Camden Catholic High School and St. Joseph's Preparatory School, and it's our entry for the 2023 Congressional App Challenge.
+
+![Camden Catholic High School](public/cchs.png)
+
+<hr>
+<br>
+
+![Saint Joseph's Prep](public/sjp.png)
+
+## TOC
+
+- [SmartCarbon](#smartcarbon)
+  - [TOC](#toc)
+  - [Features](#features)
+    - [Calculate Carbon Footprint](#calculate-carbon-footprint)
+    - [Offset Emissions](#offset-emissions)
+  - [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+
+
+## Features
+
+### Calculate Carbon Footprint
+
+SmartCarbon allows you to estimate the carbon footprint of your travel plans, taking into account various factors such as distance and mode of transportation. This feature provides valuable insights into the environmental impact of your journeys.
+
+### Offset Emissions
+
+Once you've calculated your carbon footprint, SmartCarbon offers you ways to offset your emissions.
 
 ## Getting Started
 
-First, run the development server:
+Follow these instructions to get SmartCarbon up and running on your local machine or mobile device.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clone this repository to your local machine:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```bash
+   git clone https://github.com/camdencatholic/smartcarbon.git
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. Install the required dependencies:
 
-## Learn More
+   ```bash
+   cd smartcarbon
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. Start the development server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Usage
 
-## Deploy on Vercel
+1. Visit [the SmartCarbon website]("https://camdencatholic.github.io/smartcarbon")
+2. Enter your travel details
+3. SmartCarbon will calculate the carbon footprint of your trip and provide options for offsetting emissions.
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is  &copy; 2023 Camden Catholic High School, Ryan Mullin, and Tristan Winata
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+We are looking into open source.
+
+---
+
+Together, we can reduce our carbon footprint and protect our planet for future generations. If you have any questions or suggestions, please don't hesitate to contact us.
