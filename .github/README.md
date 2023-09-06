@@ -1,6 +1,6 @@
 # SmartCarbon
 
-![SmartCarbon logo](public/favi-text.svg)
+![SmartCarbon logo](public/favi-text.png)
 SmartCarbon is an app designed to help individuals make environmentally responsible travel choices. Whether you're planning a vacation or a daily commute, SmartCarbon empowers you to calculate the carbon footprint of your travel plans and provides options to offset emissions by supporting environmental projects or making sustainable choices during your trip.
 
 This project was created as a joint effort between Camden Catholic High School and St. Joseph's Preparatory School, and it's our entry for the 2023 Congressional App Challenge.
