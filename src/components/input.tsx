@@ -102,6 +102,7 @@ export default function Input() {
                         type="number"
                         className="form-control"
                         name="planes"
+                        min={0}
                         placeholder="Miles"
                         value={formData.miles.planes || 0}
                         onChange={handleMilesChange} />
@@ -144,6 +145,7 @@ export default function Input() {
                         type="number"
                         className="form-control"
                         name="cars"
+                        min={0}
                         placeholder="Miles"
                         value={formData.miles.cars || 0}
                         onChange={handleMilesChange} />
@@ -185,6 +187,7 @@ export default function Input() {
                       <input
                         type="number"
                         className="form-control"
+                        min={0}
                         name="boats"
                         placeholder="Miles"
                         value={formData.miles.boats || 0}
