@@ -1,7 +1,7 @@
 import Image from "next/image"
 import cchs from '../../public/CCHSwithSealMaskedWhite.png'
 import sjp from '../../public/masterlogo-white.png'
-import { FontDisplay } from "@/typescript/fonts"
+import { FontDisplay, FontOrnate } from "@/typescript/fonts"
 import {name} from "@/typescript/constants"
 import Link from "next/link"
 import Icon from "./icon"
@@ -18,7 +18,7 @@ export default () => (
 				A project by
 			</h4>
 		</div>
-	<div className="container mx-auto flex justify-center items-center">
+	{/* <div className="container mx-auto flex justify-center items-center">
 	  <div className="w-1/2 flex justify-between">
 		<Link href={"https://camdencatholic.org"}>
 		  <Image
@@ -27,6 +27,7 @@ export default () => (
 			width={250}
 		  />
 		</Link>
+		<span className={`text-xl ${FontOrnate.className}`}>&</span>
 		<Link href={"https://sjprep.org"}>
 		  <Image
 			src={sjp}
@@ -35,6 +36,11 @@ export default () => (
 		  />
 		</Link>
 	  </div>
+	</div> */}
+	<div className="flex content-center justify-center">
+		<h4>
+			<Link href={"https://github.com/hiteacheryouare"}>Ryan Mullin</Link> <span className={`text-xl ${FontOrnate.className}`}>&amp; &nbsp;</span> <Link href={"https://github.com/HedgehogDubz"}>Tristan Winata</Link>
+		</h4>
 	</div>
   </footer>
 )
