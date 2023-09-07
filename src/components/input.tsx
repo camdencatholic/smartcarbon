@@ -225,6 +225,10 @@ export default function Input() {
           </div>
         </div>
       </div>
+      
+      <Link href="https://www.catf.us/" className="flex content-center justify-center">
+        <button>Consider Donating to the <b>CLEAN AIR TASK FORCE</b></button>
+      </Link>
       <div className="flex content-center justify-center">
         {totalCarbonEmissions >= dangerThreshold || totalCarbonEmissions >= warningThreshold ? <p>Consider reducing your travel <Link href={"/reduce/how-to-reduce/"} className={`link link-${totalCarbonEmissions >= dangerThreshold ? "danger" : totalCarbonEmissions >= warningThreshold ? "warning" : "success"} transition-all`}>Read More &rarr;</Link></p> : ""}
       </div>
