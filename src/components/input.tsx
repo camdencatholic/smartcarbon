@@ -194,13 +194,20 @@ export default function Input() {
       </div>
       {/* From this point onward is the progress bar thingy */}
       <div className="flex content-center justify-center pb-2">
-        <h4>
-          Total Estimated*  Carbon Emissions: &nbsp; 
-            <span>
-              {(totalCarbonEmissions / 1000).toLocaleString("en-US")}
-            </span>
-          kg of carbon
-        </h4>
+        {totalCarbonEmissions >= (1000 * dangerThreshold) ? 
+          <h4>
+            Climate change is a global crisis that requires immediate action from all of us. Your contribution to this problem is unacceptable, and I urge you to switch to more eco-friendly alternatives immediately.
+          </h4> 
+          : 
+          <h4>
+            Total Estimated*  Carbon Emissions: &nbsp; 
+              <span>
+                {(totalCarbonEmissions / 1000).toLocaleString("en-US")}
+              </span>
+            kg of carbon
+          </h4>
+        }
+        
       </div>
       <div className="flex content-center justify-center pb-6">
         <div>
