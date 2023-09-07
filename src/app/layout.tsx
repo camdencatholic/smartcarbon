@@ -32,6 +32,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  throw new Error("");
+  
   return (
     <html lang="en">
       <head>
