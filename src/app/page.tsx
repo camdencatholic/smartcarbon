@@ -1,17 +1,15 @@
+import HeroText from '@/components/heroText'
 import Icon from '@/components/icon'
 import { name } from '@/typescript/constants'
-import { FontDisplay } from '@/typescript/fonts'
-import Image from 'next/image'
 import Link from 'next/link'
+
 
 export default function Home() {
   return (
     <>
-      <section className="py-[13rem] text-white">
+      <section className="py-[13rem]">
       <div className="container mx-auto text-center">
-        <h1 className={`text-5xl font-bold mb-4 ${FontDisplay.className}`}>
-          do your part for a cleaner future.
-        </h1>
+        <HeroText />
         <p className="text-lg mb-8">
           {name} is a carbon calculator that helps you make concious decisions regarding the carbon footprint of your travel plans
         </p>
