@@ -1,3 +1,4 @@
+import Icon from '@/components/icon'
 import { name } from '@/typescript/constants'
 import { FontDisplay } from '@/typescript/fonts'
 import Image from 'next/image'
@@ -17,12 +18,12 @@ export default function Home() {
         <div className="flex justify-center">
           <div className="px-2">
             <Link href={"/app"} className="btn btn-primary">
-              Get Started
+            <Icon name="arrow-right-circle"  /> Get Started 
             </Link>
           </div>
           <div className="px-2">
             <Link href={"/reduce/how-to-reduce"} className="btn btn-secondary">
-              Learn how to reduce
+            <Icon name="recycle" /> Learn how to reduce 
             </Link>
           </div>
         </div>
