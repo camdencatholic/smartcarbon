@@ -11,7 +11,7 @@ $quinary: #3B28CC;
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 *::selection {
-	background-color: $primary;
+	background-color: mix($primary, $quinary, 0.5);
 	color: white;
 	opacity: 20%;
 }
