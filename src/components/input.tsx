@@ -39,7 +39,7 @@ export default function Input() {
 
   const milesTraveled = (formData.miles.planes || 0) + (formData.miles.cars || 0) + (formData.miles.boats || 0);
 
-  const planeCO2perMile = 3000
+  const planeCO2perMile = 400
   const carCO2perMile = 404
   const boatCO2perMile = 635
 
