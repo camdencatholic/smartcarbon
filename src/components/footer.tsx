@@ -39,7 +39,7 @@ export default () => (
 	</div> */}
 	<div className="flex content-center justify-center">
 		<h4>
-			<Link href={"https://github.com/hiteacheryouare"}>Ryan Mullin</Link> <span className={`text-xl ${FontOrnate.className}`}>&amp; &nbsp;</span> <Link href={"https://github.com/HedgehogDubz"}>Tristan Winata</Link>
+			<Link href={"https://github.com/hiteacheryouare"} className="link link-secondary">Ryan Mullin</Link> <span className={`text-xl ${FontOrnate.className}`}>&amp;</span> <Link href={"https://github.com/HedgehogDubz"} className="link link-secondary" >Tristan Winata</Link>
 		</h4>
 	</div>
   </footer>

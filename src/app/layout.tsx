@@ -12,6 +12,7 @@ const url = new URL("https://camdencatholic.github.io/smartcarbon/")
 
 
 
+
 export const metadata: Metadata = {
   title: name,
   description: description,
