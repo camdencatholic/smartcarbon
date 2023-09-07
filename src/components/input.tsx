@@ -43,6 +43,9 @@ export default function Input() {
   const carCO2perMile = 404
   const boatCO2perMile = 635
 
+  const planeMaxMiles = 10000
+  const carMaxMiles = 15000
+  const boatMaxMiles = 20000
 
   const gOfCarbonReleasedByPlane = (formData.miles.planes || 0) * planeCO2perMile;
   const gOfCarbonReleasedByCar = (formData.miles.cars || 0) * carCO2perMile;
@@ -51,7 +54,7 @@ export default function Input() {
 
   // Progress bar logic
 
-  const totalThreshold = 500 * (planeCO2perMile + carCO2perMile + boatCO2perMile)
+  const totalThreshold = planeMaxMiles * planeCO2perMile + carMaxMiles * carCO2perMile + boatMaxMiles * boatCO2perMile
   const successThreshold = totalThreshold / 3 * 1;
   const warningThreshold = totalThreshold / 3 * 2;
   const dangerThreshold  = totalThreshold / 3 * 3;
@@ -92,7 +95,7 @@ export default function Input() {
                         onChange={handleMilesChange}
                         name="planes"
                         min={0}
-                        max={500}
+                        max={planeMaxMiles}
                         step={1}
                         value={formData.miles.planes || 0}
                         className='form-range' />
@@ -129,7 +132,7 @@ export default function Input() {
                         onChange={handleMilesChange}
                         name="cars"
                         min={0}
-                        max={500}
+                        max={carMaxMiles}
                         step={1}
                         value={formData.miles.cars || 0}
                         className='form-range' />
@@ -166,7 +169,7 @@ export default function Input() {
                         onChange={handleMilesChange}
                         name="boats"
                         min={0}
-                        max={500}
+                        max={boatMaxMiles}
                         step={1}
                         value={formData.miles.boats || 0}
                         className='form-range' />

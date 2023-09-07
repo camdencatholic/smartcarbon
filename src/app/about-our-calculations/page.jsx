@@ -11,7 +11,7 @@ export default () => {
 						The emission factors used in this calculator are based on typical values for various modes of transportation. Here's a breakdown:
 					</p>
 					<ul>
-						<li>Planes: 41 grams of CO2 per mile</li>
+						<li>Planes: 400 grams of CO2 per mile</li>
 						<li>Cars: 404 grams of CO2 per mile</li>
 						<li>Boats: 635 grams of CO2 per mile</li>
 					</ul>
