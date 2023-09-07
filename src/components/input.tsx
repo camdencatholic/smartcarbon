@@ -6,9 +6,9 @@ import Link from 'next/link';
 
 export default function Input() {
   const [formData, setFormData] = useState<FormData>({
-    planes: false,
-    cars: false,
-    boats: false,
+    planes: true,
+    cars: true,
+    boats: true,
     miles: {
       planes: null,
       cars: null,
@@ -70,14 +70,7 @@ export default function Input() {
     <div className="flex content-center justify-center p-10 ">
         <div className="">
           <form>
-            <div className="form-check form-control-lg">
-              <input
-                type="checkbox"
-                className="form-check-input"
-                id="planes"
-                name="planes"
-                checked={formData.planes}
-                onChange={handleCheckboxChange} />
+          <div className="form-check form-control-lg">              
               <label className="form-check-label" htmlFor="planes">
                 <Icon name="airplane-engines" />Planes
               </label>
@@ -114,13 +107,7 @@ export default function Input() {
             )}
 
             <div className="form-check form-control-lg">
-              <input
-                type="checkbox"
-                className="form-check-input"
-                id="cars"
-                name="cars"
-                checked={formData.cars}
-                onChange={handleCheckboxChange} />
+             
               <label className="form-check-label" htmlFor="cars">
                 <Icon name='car-front' />Cars
               </label>
@@ -157,13 +144,7 @@ export default function Input() {
             )}
 
             <div className="form-check form-control-lg">
-              <input
-                type="checkbox"
-                className="form-check-input"
-                id="boats"
-                name="boats"
-                checked={formData.boats}
-                onChange={handleCheckboxChange} />
+              
               <label className="form-check-label" htmlFor="boats">
                 <Icon name='water' />Boats
               </label>
