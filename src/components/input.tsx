@@ -49,14 +49,14 @@ export default function Input() {
   const warningThreshold = 250000;
   const dangerThreshold = 500000;
 
-  let successPercentage = (totalCarbonEmissions / successThreshold) * 100;
-  let warningPercentage = ((totalCarbonEmissions - successThreshold) / (warningThreshold - successThreshold)) * 100;
-  let dangerPercentage = ((totalCarbonEmissions - warningThreshold) / (dangerThreshold - warningThreshold)) * 100;
+  let successPercentage = (totalCarbonEmissions / successThreshold) * 100 / 3;
+  let warningPercentage = ((totalCarbonEmissions - successThreshold) / (warningThreshold - successThreshold)) * 100 / 3;
+  let dangerPercentage = ((totalCarbonEmissions - warningThreshold) / (dangerThreshold - warningThreshold)) * 100 / 3;
 
   // Ensure the percentages stay within 0% to 100%
-  successPercentage = Math.min(100, Math.max(0, successPercentage));
-  warningPercentage = Math.min(100, Math.max(0, warningPercentage));
-  dangerPercentage = Math.min(100, Math.max(0, dangerPercentage));
+  successPercentage = Math.min(100 / 3, Math.max(0, successPercentage));
+  warningPercentage = Math.min(100 / 3, Math.max(0, warningPercentage));
+  dangerPercentage = Math.min(100 / 3, Math.max(0, dangerPercentage));
   
   
   return (
