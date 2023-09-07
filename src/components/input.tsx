@@ -38,16 +38,23 @@ export default function Input() {
   // Basic Calculations
 
   const milesTraveled = (formData.miles.planes || 0) + (formData.miles.cars || 0) + (formData.miles.boats || 0);
-  const gOfCarbonReleasedByPlane = (formData.miles.planes || 0) * 41;
-  const gOfCarbonReleasedByCar = (formData.miles.cars || 0) * 404;
-  const gOfCarbonReleasedByBoat = (formData.miles.boats || 0) * 635;
+
+  const planeCO2perMile = 3000
+  const carCO2perMile = 404
+  const boatCO2perMile = 635
+
+
+  const gOfCarbonReleasedByPlane = (formData.miles.planes || 0) * planeCO2perMile;
+  const gOfCarbonReleasedByCar = (formData.miles.cars || 0) * carCO2perMile;
+  const gOfCarbonReleasedByBoat = (formData.miles.boats || 0) * boatCO2perMile;
   const totalCarbonEmissions = gOfCarbonReleasedByPlane + gOfCarbonReleasedByCar + gOfCarbonReleasedByBoat;
 
   // Progress bar logic
 
-  const successThreshold = 100000;
-  const warningThreshold = 250000;
-  const dangerThreshold = 500000;
+  const totalThreshold = 500 * (planeCO2perMile + carCO2perMile + boatCO2perMile)
+  const successThreshold = totalThreshold / 3 * 1;
+  const warningThreshold = totalThreshold / 3 * 2;
+  const dangerThreshold  = totalThreshold / 3 * 3;
 
   let successPercentage = (totalCarbonEmissions / successThreshold) * 100 / 3;
   let warningPercentage = ((totalCarbonEmissions - successThreshold) / (warningThreshold - successThreshold)) * 100 / 3;
