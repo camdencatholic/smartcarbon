@@ -12,6 +12,8 @@ This project was created as a joint effort between Camden Catholic High School a
 
 ![Saint Joseph's Prep](public/sjp.png)
 
+Learn more by watching the video [here](https://youtu.be/I-XUKGqSZts?si=9y6f4R0uEadpMG8t)
+
 ## TOC
 
 - [SmartCarbon](#smartcarbon)
