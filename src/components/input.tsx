@@ -81,7 +81,7 @@ export default function Input() {
         <div className="">
           <form>
           <div className="form-check form-control-lg">              
-              <label className="form-check-label" htmlFor="planes">
+              <label className="form-check-label text-theme-primary" htmlFor="planes">
                 <Icon name="airplane-engines" />Planes
               </label>
             </div>
@@ -118,7 +118,7 @@ export default function Input() {
 
             <div className="form-check form-control-lg">
              
-              <label className="form-check-label" htmlFor="cars">
+              <label className="form-check-label text-theme-primary" htmlFor="cars">
                 <Icon name='car-front' />Cars
               </label>
             </div>
@@ -155,7 +155,7 @@ export default function Input() {
 
             <div className="form-check form-control-lg">
               
-              <label className="form-check-label" htmlFor="boats">
+              <label className="form-check-label text-theme-primary" htmlFor="boats">
                 <Icon name='water' />Boats
               </label>
             </div>
