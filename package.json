@@ -12,7 +12,7 @@
   "dependencies": {
     "@porkyproductions/hat": "^1.5.0",
     "@types/node": "20.5.0",
-    "@types/react": "18.2.20",
+    "@types/react": "18.2.35",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
     "bootstrap": "^5.3.2",
